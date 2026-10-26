@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS conversions (
+ id SERIAL PRIMARY KEY,
+ amount NUMERIC(18,4) NOT NULL,
+ source_currency VARCHAR(3) NOT NULL,
+ target_currency VARCHAR(3) NOT NULL,
+ result NUMERIC(18,4) NOT NULL,
+ rate NUMERIC(18,8) NOT NULL,
+ created_at TIMESTAMPTZ DEFAULT NOW()
+);
